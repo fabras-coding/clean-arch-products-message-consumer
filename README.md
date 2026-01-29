@@ -145,6 +145,17 @@ The application will continue running and consuming messages until interrupted (
 4. **Synchronization**: `Task.WhenAll()` waits for both consumers to complete
 5. **Message Processing**: Each consumer handles incoming messages from its respective source
 
+## Data Persistence with DynamoDB
+
+The application includes **DynamoDB persistence** capabilities to store and manage product data from consumed messages:
+
+- **DynamoPersistence.cs**: Handles all database operations with DynamoDB
+- **LocalStack Integration**: DynamoDB is provided locally via LocalStack for development and testing
+- **Product Storage**: Consumed messages are persisted to DynamoDB tables for long-term storage
+- **Async Operations**: All persistence operations are fully asynchronous for non-blocking I/O
+
+The persistence layer integrates seamlessly with both Kafka and SQS consumers, allowing messages to be stored immediately upon consumption.
+
 ## NuGet Dependencies
 
 - **Confluent.Kafka** - Apache Kafka client library

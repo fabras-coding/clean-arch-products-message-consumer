@@ -38,7 +38,10 @@ try
         ServiceURL = "http://localhost:4566"
     });
 
-    var response = await sqsClient.GetQueueUrlAsync(TOPIQUEUE);
+    var response = await sqsClient.GetQueueUrlAsync(new GetQueueUrlRequest
+    {
+        QueueName = TOPIQUEUE
+    });
 
     var receiveMessageRequest = new ReceiveMessageRequest
     {

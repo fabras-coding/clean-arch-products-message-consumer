@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Amazon.SQS;
 using Amazon.SQS.Model;
+using consumerMessage.Services.Persistence.Data;
 
 
 namespace consumerMessage.Services.Consumer.SQS
@@ -46,6 +47,8 @@ namespace consumerMessage.Services.Consumer.SQS
                         QueueUrl = _receiveMessageRequest.QueueUrl,
                         ReceiptHandle = message.ReceiptHandle
                     };
+
+                    DynamoPersistence.SaveProductStockAsync(new Random().Next(1,100), message.MessageId).Wait(); //just a random number for demo, but it should come from the message
 
                     await _sqsClient.DeleteMessageAsync(deleteRequest);
                     Console.WriteLine($"Deleted message with ReceiptHandle: {message.ReceiptHandle}");
