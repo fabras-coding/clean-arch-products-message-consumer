@@ -1,0 +1,98 @@
+# Build results
+bin/
+obj/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+# Visual Studio cache/options directory
+.vs/
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Visual Studio user-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build lock file
+project.assets.json
+project.fragment.lock.json
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+.nuget/
+
+# Compiled output
+*.dll
+*.exe
+*.pdb
+*.so
+*.dylib
+
+# IDE-specific files
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+.env.local
+
+# User secrets
+**/appsettings.local.json
+**/secrets.json
+**/user-secrets.json
+
+# Test Results
+TestResults/
+.coverage
+*.trx
+
+# Local environment
+.env
+.env.local
+.env.*.local
+
+# LocalStack/Docker artifacts (optional - uncomment if you want to ignore local data)
+# infra/localstack/dynamoDb/localstack-data/
+
+# Rider
+.idea/
+*.sln.iml
+
+# ReSharper
+.resharper
+.resharper.user
+_ReSharper*/
+*.[Rr]esharper[^/]*/?*
+*.DotSettings.user
+
+# Output folders from publishing
+publish/
+PublishProfiles/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Python (if using any Python scripts)
+__pycache__/
+*.py[cod]
+*$py.class
